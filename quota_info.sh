@@ -1,5 +1,15 @@
 #!/bin/bash
 
+
+if [ "$OS_USERNAME" != "admin" ] && [ "$OS_TENANT_NAME" != "admin" ]
+then
+  echo "**************************************************"
+  echo "****Error: Not sourced the \"admin\" user openrc **"
+  echo "**source openrc for admin tenant and re-run as below"
+  echo "sh $0"
+  echo "****************************************************"
+fi
+
 # Create a tmp dir to place the log the file in current working directory
 mkdir tmp  
 
